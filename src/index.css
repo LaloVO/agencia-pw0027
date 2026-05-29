@@ -1,0 +1,172 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 40 30% 97%; /* #FAF6F0 warm sand */
+    --foreground: 240 10% 10%; /* #18181B charcoal */
+
+    --card: 0 0% 100%; /* White cards */
+    --card-foreground: 240 10% 10%;
+
+    --popover: 40 30% 97%;
+    --popover-foreground: 240 10% 10%;
+
+    --primary: 24 95% 53%; /* #F97316 Naranja Match */
+    --primary-foreground: 40 30% 97%;
+
+    --secondary: 47 95% 47%; /* #EAB308 Amarillo */
+    --secondary-foreground: 240 10% 10%;
+
+    --muted: 240 5% 90%;
+    --muted-foreground: 240 5% 45%;
+
+    --accent: 24 95% 53%;
+    --accent-foreground: 40 30% 97%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 240 5% 85%;
+    --input: 240 5% 85%;
+    --ring: 24 95% 53%;
+
+    --radius: 1.5rem; /* rounded-3xl */
+
+    /* Gradients */
+    --gradient-hero: linear-gradient(180deg, transparent 0%, rgba(24, 24, 27, 0.9) 100%);
+    --gradient-card: linear-gradient(180deg, transparent 0%, rgba(24, 24, 27, 0.75) 100%);
+
+    /* Shadows */
+    --shadow-elegant: 0 20px 40px -15px rgba(249, 115, 22, 0.12), 0 10px 20px -10px rgba(0, 0, 0, 0.05);
+    --shadow-card: 0 10px 30px -5px rgba(24, 24, 27, 0.06);
+
+    --sidebar-background: 40 30% 97%;
+    --sidebar-foreground: 240 10% 10%;
+    --sidebar-primary: 24 95% 53%;
+    --sidebar-primary-foreground: 40 30% 97%;
+    --sidebar-accent: 240 5% 90%;
+    --sidebar-accent-foreground: 240 10% 10%;
+    --sidebar-border: 240 5% 85%;
+    --sidebar-ring: 24 95% 53%;
+  }
+
+  .dark {
+    --background: 240 10% 4%; /* #09090B deep dark slate */
+    --foreground: 40 30% 97%;
+
+    --card: 240 10% 8%; /* #121214 deep card */
+    --card-foreground: 40 30% 97%;
+
+    --popover: 240 10% 8%;
+    --popover-foreground: 40 30% 97%;
+
+    --primary: 24 95% 53%;
+    --primary-foreground: 240 10% 4%;
+
+    --secondary: 47 95% 47%;
+    --secondary-foreground: 240 10% 4%;
+
+    --muted: 240 5% 15%;
+    --muted-foreground: 240 5% 70%;
+
+    --accent: 24 95% 53%;
+    --accent-foreground: 240 10% 4%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 240 5% 15%;
+    --input: 240 5% 15%;
+    --ring: 24 95% 53%;
+
+    --sidebar-background: 240 10% 4%;
+    --sidebar-foreground: 40 30% 97%;
+    --sidebar-primary: 24 95% 53%;
+    --sidebar-primary-foreground: 240 10% 4%;
+    --sidebar-accent: 240 5% 15%;
+    --sidebar-accent-foreground: 40 30% 97%;
+    --sidebar-border: 240 5% 15%;
+    --sidebar-ring: 24 95% 53%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased selection:bg-primary/20 selection:text-primary;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-sans font-bold tracking-tight;
+  }
+}
+
+@layer components {
+  .luxury-container {
+    @apply max-w-[85rem] mx-auto px-5 md:px-10;
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  /* Sticker pop-art style with thick white border */
+  .popart-sticker {
+    @apply border-[6px] border-white shadow-[0_15px_30px_-5px_rgba(24,24,27,0.2)] rounded-3xl transition-transform duration-500 hover:scale-[1.02] hover:-rotate-1;
+  }
+
+  /* 3D clay-like sticky note styling */
+  .tape-3d {
+    @apply relative before:content-[''] before:absolute before:-top-4 before:left-1/2 before:-translate-x-1/2 before:w-20 before:h-8 before:bg-white/40 before:backdrop-blur-sm before:border-l before:border-r before:border-white/20 before:rotate-[-2deg] before:shadow-[0_2px_4px_rgba(0,0,0,0.05)] before:z-10;
+  }
+}
+
+@layer utilities {
+  .hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Reveal animations */
+  .reveal-up {
+    @apply opacity-0 translate-y-[40px] transition-all duration-[1000ms];
+    transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+  }
+
+  .reveal-active {
+    @apply opacity-100 translate-y-0;
+  }
+
+  /* Hover effects */
+  .hover-lift {
+    @apply transition-all duration-300;
+  }
+
+  .hover-lift:hover {
+    @apply -translate-y-2 shadow-xl;
+  }
+
+  .image-zoom {
+    @apply transition-transform;
+    transition-duration: 1000ms;
+  }
+
+  .group:hover .image-zoom {
+    @apply scale-105;
+  }
+
+  /* Highlight marker */
+  .marker-highlight {
+    background: linear-gradient(120deg, rgba(254, 240, 138, 0.6) 0%, rgba(254, 240, 138, 0.8) 100%);
+    padding: 0 4px;
+    border-radius: 4px;
+  }
+}
