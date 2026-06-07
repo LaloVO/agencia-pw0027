@@ -18,8 +18,8 @@ const BioShell = () => {
     return () => obs.disconnect();
   }, []);
 
-  const rawPhone = user?.telefono_usuario?.replace(/\D/g, '') || '4461017693';
-  const whatsappMsg = encodeURIComponent("¡Hola Martha! Vi tu perfil de Matchmaker y me gustaría agendar un recorrido personalizado.");
+  const rawPhone = user?.telefono_usuario?.replace(/\D/g, '') || '5210000000000';
+  const whatsappMsg = encodeURIComponent("¡Hola Asesor Demo! y me gustaría agendar un recorrido personalizado.");
   const whatsappUrl = `https://wa.me/${rawPhone}?text=${whatsappMsg}`;
 
   // Real profile pic from CRM or Unsplash fallback
@@ -44,7 +44,7 @@ const BioShell = () => {
             <div className="relative w-full max-w-[340px] aspect-[4/5] popart-sticker overflow-hidden bg-gradient-to-tr from-primary/20 via-transparent to-[#EAB308]/20">
               <img 
                 src={profilePic} 
-                alt="Martha Match en Sillón Naranja" 
+                alt="Asesor Demo en Sillón Naranja" 
                 className="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-700" 
               />
               {/* Sticker overlay hearts badge */}
@@ -72,7 +72,7 @@ const BioShell = () => {
             </div>
 
             <h3 className="font-sans font-bold text-lg text-primary uppercase tracking-widest mb-6">
-              Guía, Matchmaker y Estratega Inmobiliaria
+              Guía y Estratega Inmobiliaria
             </h3>
 
             <div className="font-sans text-base text-[#18181B]/80 dark:text-[#FAF6F0]/80 leading-relaxed mb-6 space-y-4">
@@ -96,13 +96,13 @@ const BioShell = () => {
                 className="flex items-center gap-2 bg-[#25D366] text-white hover:bg-[#20ba5a] font-extrabold text-sm px-6 py-3.5 rounded-full shadow-[0_4px_14px_rgba(37,211,102,0.3)] hover:scale-103 transition-all duration-300"
               >
                 <MessageCircle className="w-5 h-5 shrink-0" />
-                <span>Agendar Recorrido con Martha</span>
+                <span>Agendar Recorrido con Asesor Demo</span>
               </a>
 
               <div className="font-sans">
                 <span className="block text-xs text-muted-foreground uppercase tracking-widest font-semibold">Firma del Matchmaker</span>
                 <span className="font-accent text-3xl text-primary font-bold inline-block rotate-[-5deg] ml-1">
-                  Martha Match
+                  Asesor Demo
                 </span>
               </div>
             </div>

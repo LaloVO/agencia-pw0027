@@ -27,8 +27,8 @@ const ValuesNotes = () => {
     },
     {
       icon: <Sparkles className="w-8 h-8 text-[#EAB308]" />,
-      title: "Solo lo que hace match",
-      desc: "No trabajo con volumen, trabajo con intención. Cada opción que te comparto ha sido cuidadosamente filtrada para asegurarnos de que podría hacer match contigo, evitando mostrarte opciones sin sentido.",
+      title: "Solo lo que importa",
+      desc: "No trabajo con volumen, trabajo con intención. Cada opción que te comparto ha sido cuidadosamente filtrada para asegurarnos de que podría ser para ti, evitando mostrarte opciones sin sentido.",
       rotate: "rotate-[2deg] hover:rotate-[-0.5deg]",
       color: "bg-white/80 dark:bg-black/35",
       sticker: "⚡",

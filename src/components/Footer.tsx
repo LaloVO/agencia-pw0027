@@ -4,8 +4,8 @@ import { Instagram, MessageCircle } from 'lucide-react';
 
 const Footer = () => {
   const { user } = useSiteUser();
-  const rawPhone = user?.telefono_usuario?.replace(/\D/g, '') || '4461017693';
-  const whatsappMsg = encodeURIComponent("¡Hola Martha! Vi tu página de Match Houses y me gustaría agendar un recorrido inmobiliario.");
+  const rawPhone = user?.telefono_usuario?.replace(/\D/g, '') || '5210000000000';
+  const whatsappMsg = encodeURIComponent("¡Hola Asesor Demo! Vi tu página de Agencia y me gustaría agendar un recorrido inmobiliario.");
   const whatsappUrl = `https://wa.me/${rawPhone}?text=${whatsappMsg}`;
 
   return (
@@ -18,14 +18,14 @@ const Footer = () => {
           <div className="max-w-md">
             <Link to="/" className="flex items-center gap-1.5 mb-5 group">
               <span className="font-sans font-extrabold text-2xl tracking-tighter text-white">
-                MATCH
+                AGENCIA
               </span>
               <span className="font-accent text-4xl text-primary font-bold rotate-[-6deg] inline-block">
-                Houses
+                Inmobiliaria
               </span>
             </Link>
             <p className="font-sans text-sm text-[#FAF6F0]/70 leading-relaxed max-w-sm">
-              Asesora inmobiliaria en Querétaro Moderno (Zakia) y tu aliada para encontrar la casa que realmente hace match contigo.
+              Asesoría inmobiliaria profesional para encontrar tu propiedad ideal.
             </p>
           </div>
 
@@ -34,14 +34,14 @@ const Footer = () => {
               <h4 className="text-xs uppercase tracking-widest text-primary font-bold mb-4">Contacto</h4>
               <p className="text-sm text-[#FAF6F0]/70 mb-2">Querétaro Moderno • Zakia</p>
               <p className="text-sm text-[#FAF6F0]/70 mb-2">{user?.email_usuario ?? 'martha.match@homepty.com'}</p>
-              <p className="text-sm text-[#FAF6F0]/70">{user?.telefono_usuario ?? '446 101 7693'}</p>
+              <p className="text-sm text-[#FAF6F0]/70">{user?.telefono_usuario ?? '521 000 000 0000'}</p>
             </div>
 
             <div>
               <h4 className="text-xs uppercase tracking-widest text-primary font-bold mb-4">Redes</h4>
               <div className="flex gap-4">
                 <a
-                  href="https://www.instagram.com/marthamatch_/"
+                  href="#"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="p-3 rounded-full bg-white/5 border border-white/10 hover:bg-primary/20 hover:border-primary/40 hover:scale-115 transition-all text-[#FAF6F0]"
@@ -64,7 +64,7 @@ const Footer = () => {
         </div>
 
         <div className="mt-16 pt-8 border-t border-white/10 text-xs text-[#FAF6F0]/50 flex flex-col sm:flex-row justify-between gap-4">
-          <span>© {new Date().getFullYear()} Match Houses. Todos los derechos reservados.</span>
+          <span>© {new Date().getFullYear()} Agencia. Todos los derechos reservados.</span>
           <div className="flex gap-4">
             <Link to="/solicita-inmueble" className="hover:text-primary transition-colors">Búsqueda Inteligente</Link>
             <Link to="/mapa" className="hover:text-primary transition-colors">Propiedades</Link>

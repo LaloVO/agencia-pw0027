@@ -10,7 +10,7 @@ export default function SolicitaInmueble() {
   return (
     <>
       <Helmet>
-        <title>Búsqueda Inteligente | Match Houses</title>
+        <title>Búsqueda Inteligente | Agencia</title>
         <meta
           name="description"
           content="Completa nuestra solicitud inteligente de 6 pasos para encontrar tu propiedad de lujo ideal. Evaluamos tu estilo de vida para una recomendación perfecta."

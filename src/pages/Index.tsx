@@ -11,10 +11,10 @@ const Index = () => {
   return (
     <>
       <Helmet>
-        <title>Match Houses | Martha Match — Tu Matchmaker Inmobiliario en Querétaro</title>
+        <title>Agencia | Asesor Demo — Asesora Inmobiliaria</title>
         <meta
           name="description"
-          content="Encuentra la casa o departamento que realmente hace match contigo. Martha Match, asesora inmobiliaria en Querétaro Moderno (Zakia), te acompaña de manera intencional y transparente."
+          content="Encuentra la casa o departamento que realmente hace match contigo. Asesor Demo te acompaña de manera intencional y transparente."
         />
       </Helmet>
 

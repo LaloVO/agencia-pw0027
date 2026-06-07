@@ -57,10 +57,10 @@ const MapPage = () => {
   return (
     <>
       <Helmet>
-        <title>Explorar Propiedades | Match Houses</title>
+        <title>Explorar Propiedades | Agencia</title>
         <meta
           name="description"
-          content="Explora el mapa interactivo de Match Houses para encontrar propiedades exclusivas en Querétaro Moderno."
+          content="Explora el mapa interactivo de Agencia para encontrar propiedades exclusivas en Querétaro Moderno."
         />
       </Helmet>
 

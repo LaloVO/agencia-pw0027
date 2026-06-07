@@ -111,7 +111,7 @@ const HeroMatch = () => {
       if (direction === 'right') {
         // Redirige a SolicitaInmueble con datos prellenados de la propiedad
         const currentProp = properties[deckIndex % properties.length];
-        navigate(`/solicita-inmueble?prop_match=${currentProp.id}&tipo_prop=${currentProp.tipo?.toLowerCase()}`);
+        navigate(`/solicita-inmueble?prop_id=${currentProp.id}&tipo_prop=${currentProp.tipo?.toLowerCase()}`);
       } else {
         // Pasa a la siguiente tarjeta en el deck
         setDeckIndex((prev) => prev + 1);
@@ -159,11 +159,11 @@ const HeroMatch = () => {
             {/* Sticker portrait overlap */}
             <div className="flex items-center gap-4 bg-white/80 dark:bg-black/40 backdrop-blur-md p-3.5 rounded-3xl border border-black/5 shadow-card hover:scale-102 transition-transform duration-300">
               <div className="relative w-14 h-14 rounded-2xl overflow-hidden border-2 border-primary">
-                <img src={profilePic} alt="Martha Match" className="w-full h-full object-cover" />
+                <img src={profilePic} alt="Asesor Demo" className="w-full h-full object-cover" />
               </div>
               <div className="font-sans">
                 <div className="flex items-center gap-1">
-                  <span className="font-bold text-[#18181B] dark:text-[#FAF6F0] text-sm">Martha Match</span>
+                  <span className="font-bold text-[#18181B] dark:text-[#FAF6F0] text-sm">Asesor Demo</span>
                   <CheckCircle2 className="w-3.5 h-3.5 fill-primary text-white" />
                 </div>
                 <span className="text-xs text-muted-foreground">Tu Guía y Estratega Inmobiliario</span>
@@ -278,7 +278,7 @@ const HeroMatch = () => {
                           aria-label="Like"
                         >
                           <Heart className="w-4 h-4 fill-white animate-pulse" />
-                          <span>Hacer Match</span>
+                          <span>Me interesa</span>
                         </button>
                       </div>
                     </div>
@@ -292,7 +292,7 @@ const HeroMatch = () => {
             </div>
             
             <p className="text-[11px] text-muted-foreground italic font-sans mt-3.5">
-              💡 Desliza a la derecha (Match) para recibir opciones a tu medida.
+              💡 Desliza para recibir opciones a tu medida.
             </p>
           </div>
 
@@ -314,7 +314,7 @@ const HeroMatch = () => {
                 setSelectedCoords(null);
               }}
               onFocus={() => suggestions.length > 0 && setShowSuggestions(true)}
-              placeholder="Ubicación (ej. Zakia, Querétaro)..."
+              placeholder="Ubicación (ej. Querétaro)..."
               autoComplete="off"
               className="w-full py-3 bg-transparent text-sm text-[#18181B] dark:text-[#FAF6F0] focus:outline-none placeholder:text-muted-foreground"
             />

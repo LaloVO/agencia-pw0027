@@ -17,9 +17,9 @@ const PropertyDetail = () => {
     enabled: !!id,
   });
 
-  const rawPhone = user?.telefono_usuario?.replace(/\D/g, '') || '4461017693';
+  const rawPhone = user?.telefono_usuario?.replace(/\D/g, '') || '5210000000000';
   const whatsappMsg = property
-    ? encodeURIComponent(`¡Hola Martha! Me interesa hacer match con la propiedad: "${property.nombre}" (ID: ${property.id}). ¿Podríamos agendar una visita?`)
+    ? encodeURIComponent(`¡Hola Asesor Demo! Me interesa conocer la propiedad: "${property.nombre}" (ID: ${property.id}). ¿Podríamos agendar una visita?`)
     : '';
   const whatsappUrl = `https://wa.me/${rawPhone}?text=${whatsappMsg}`;
 
@@ -68,7 +68,7 @@ const PropertyDetail = () => {
   return (
     <>
       <Helmet>
-        <title>{property.nombre} | Match Houses</title>
+        <title>{property.nombre} | Agencia</title>
         <meta name="description" content={property.descripcion ?? property.nombre} />
       </Helmet>
 
@@ -101,7 +101,7 @@ const PropertyDetail = () => {
               {images.length < 3 && (
                 <div className="aspect-[4/3] bg-primary/10 dark:bg-primary/20 flex flex-col items-center justify-center text-center p-4 rounded-[20px] border border-dashed border-primary/30">
                   <Sparkles className="w-6 h-6 text-primary animate-pulse mb-2" />
-                  <span className="font-accent text-lg text-primary font-bold">Match Houses</span>
+                  <span className="font-accent text-lg text-primary font-bold">Agencia</span>
                 </div>
               )}
             </div>
@@ -192,12 +192,12 @@ const PropertyDetail = () => {
                   <div className="relative w-12 h-12 rounded-2xl overflow-hidden border-2 border-primary">
                     <img
                       src={user?.imagen_perfil_usuario || 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=800&auto=format&fit=crop'}
-                      alt={user?.nombre_usuario || 'Martha Match'}
+                      alt={user?.nombre_usuario || 'Asesor Demo'}
                       className="w-full h-full object-cover"
                     />
                   </div>
                   <div>
-                    <p className="font-bold text-sm text-[#18181B] dark:text-[#FAF6F0]">{user?.nombre_usuario || 'Martha Match'}</p>
+                    <p className="font-bold text-sm text-[#18181B] dark:text-[#FAF6F0]">{user?.nombre_usuario || 'Asesor Demo'}</p>
                     <p className="text-xs text-muted-foreground">Tu Guía y Matchmaker Inmobiliaria</p>
                   </div>
                 </div>

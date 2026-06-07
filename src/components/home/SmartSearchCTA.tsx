@@ -89,7 +89,7 @@ export default function SmartSearchCTA() {
 
               <div className="flex items-center justify-between mt-3 text-[10px] font-sans font-semibold text-green-700">
                 <span>✓ Rango de Presupuesto: Apto</span>
-                <span>Match: 96%</span>
+                <span>Recomendado: 96%</span>
               </div>
             </div>
 
